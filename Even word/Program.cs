@@ -4,12 +4,12 @@
     {
         public static void Main()
         {
-            Console.WriteLine(SolutionTerceiro("acbcbba") == 1 ? "Correto" : "Errado");
-            Console.WriteLine(SolutionTerceiro("axxaxa") == 2 ? "Correto" : "Errado");
-            Console.WriteLine(SolutionTerceiro("aaaa") == 0 ? "Correto" : "Errado");
+            Console.WriteLine(Solution("acbcbba") == 1 ? "Correto" : "Errado");
+            Console.WriteLine(Solution("axxaxa") == 2 ? "Correto" : "Errado");
+            Console.WriteLine(Solution("aaaa") == 0 ? "Correto" : "Errado");
         }
 
-        internal static int SolutionTerceiro(string S)
+        internal static int Solution(string S)
         {
             var list = S.OrderBy(x => x).ToArray();
             int remotions = 0;
