@@ -11,12 +11,12 @@
 
         internal static int Solution(string S)
         {
-            var list = S.OrderBy(x => x).ToArray();
+            string sortedWord = string.Concat(S.OrderBy(c => c));
             int remotions = 0;
             int countLetter = 1;
-            for (int i = 1; i < list.Length; i++)
+            for (int i = 1; i < sortedWord.Length; i++)
             {
-                if (list[i] == list[i - 1])
+                if (sortedWord[i] == sortedWord[i - 1])
                     countLetter++;
                 else if (countLetter % 2 != 0)
                 {
