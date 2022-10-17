@@ -11,6 +11,19 @@
 
         internal static int Solution(string S)
         {
+            int remotions = 0;
+            var arrInt = new int[26];
+            for (int i = 0; i < S.Length; i++)
+                arrInt[S[i] - 97]++;
+
+            for (int i = 0; i < 26; i++)
+                if (arrInt[i] % 2 == 1)
+                    remotions++;
+            return remotions;
+        }
+
+        internal static int SolutionReserva(string S)
+        {
             string sortedWord = string.Concat(S.OrderBy(c => c));
             int remotions = 0;
             int countLetter = 1;
